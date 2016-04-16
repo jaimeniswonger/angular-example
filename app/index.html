@@ -6,17 +6,32 @@
         <title>AngularJS Example</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="//code.angularjs.org/1.5.3/angular.min.js"></script>
+        <script src="http://code.angularjs.org/1.5.3/angular.min.js"></script>
         <script src="app.js"></script>
     </head>
 
     <body ng-controller="CurrencyCounterCtrl">
 
-        <label>Quarters</label><input ng-model="quarters"/>
-        <input ng-model="dimes"/>
-        <input ng-model="nickels"/>
-        <input ng-model="pennies"/>
+        <div>
+            <label>Quarters:</label>
+            <input type="number" ng-model="quarters"/>
+        </div>
+        <div>
+            <label>Dimes:</label>
+            <input type="number" ng-model="dimes"/>
+        </div>
+        <div></div>
+        <div>
+            <label>Nickels:</label>
+            <input type="number" ng-model="nickels"/>
+        </div>
+        <div>
+            <label>Pennies:</label>
+            <input type="number" ng-model="pennies"/>
+        </div>
+
         <button ng-click="totalIt()">Count</button>
+        <hr/>
 
         Total: {{total | currency }}
 
